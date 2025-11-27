@@ -2053,6 +2053,9 @@ static int attach_luks_or_plain_or_bitlk_by_tpm2(
         if (!friendly)
                 return log_oom();
 
+        // TODO: DROP!!!
+        return log_error_errno(SYNTHETIC_ERRNO(EAGAIN), "TPM2 PIN unlock failed, falling back to traditional unlocking.");
+
         for (;;) {
                 if (key_file || iovec_is_set(key_data)) {
                         /* If key data is specified, use that */
