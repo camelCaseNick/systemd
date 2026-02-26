@@ -90,6 +90,10 @@ units = [
           'conditions' : ['ENABLE_INITRD'],
         },
         {
+          'file' : 'initrd-tmp-root.mount',
+          'conditions' : ['ENABLE_INITRD'],
+        },
+        {
           'file' : 'initrd-switch-root.service',
           'conditions' : ['ENABLE_INITRD'],
         },
